@@ -1,0 +1,14 @@
+FUNCTION PALINDROME(STR:STRING) : BOOLEAN
+VAR
+    i:INTEGER;
+BEGIN
+    IF ( STR[i] = 1) THEN       //base case:condition de stop
+        RETURN TRUE;
+    END_IF
+    IF (STR[i] = STR[i-1]) THEN         //compare the first element with the last elment of the string
+        RETURN PALINDROME(STR[i ,i-1])       //Recursive fonction
+    ELSE
+        RETURN FALSE;      //WORD IS NOT PALINDROME
+    END_IF
+    
+END
